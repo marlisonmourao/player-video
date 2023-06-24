@@ -35,13 +35,13 @@ export function Module({ amountOfLessons, title, moduleIndex }: ModuleProps) {
 
       <Collapsible.Content>
         <nav className="relative flex flex-col gap-4 p-4">
-          {lessons.map((lesson, lessionIndex) => {
+          {lessons.map((lesson, lessonIndex) => {
             return (
               <Lesson
                 key={lesson.id}
                 title={lesson.title}
                 duration={lesson.duration}
-                onPlay={() => dispatch(play([moduleIndex, lessionIndex]))}
+                onPlay={() => dispatch(play([moduleIndex, lessonIndex]))}
               />
             )
           })}
